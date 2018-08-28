@@ -334,7 +334,14 @@ body {
   width: 70px;
   animation: float 3s ease-in-out infinite;
   margin-top: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .measure span {
+    padding: 0 5px; }
 
 .measure-container {
   border-radius: 50%;

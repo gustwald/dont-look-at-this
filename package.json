@@ -30,7 +30,7 @@
     "client": "yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" \"yarn watch-css\" ",
-    "prod": "yarn build && yarn dev"
+    "prod": "react-scripts build && npm run dev"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
