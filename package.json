@@ -1,0 +1,38 @@
+{
+  "name": "kondomstorlek_v1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.1.0",
+    "classnames": "^2.2.6",
+    "custom-react-scripts": "^0.2.1",
+    "emoji-mart": "^2.8.1",
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3",
+    "node-sass-chokidar": "0.0.3",
+    "node-schedule": "^1.2.5",
+    "nodemon": "^1.14.7",
+    "npm": "^5.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "smooth-scroll": "^12.1.5",
+    "waypoints": "^4.0.1",
+    "xml2js": "^0.4.19"
+  },
+  "scripts": {
+    "start": "PORT=4007 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "build-css": "node-sass-chokidar --include-path ./src/scss --include-path ./node_modules src/scss/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/scss/ --include-path ./node_modules src/scss/ -o src/scss/ --watch --recursive",
+    "eject": "react-scripts eject",
+    "client": "yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" \"yarn watch-css\" "
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "proxy": "http://localhost:2000/"
+}

@@ -1,0 +1,37 @@
+// Colors
+$c-text-color: #222;
+$c-primary: #bd07ef;
+$c-secondary: #ebead3;
+
+// Size
+$s-grid-width: 1200px;
+$s-base-margin: 30px;
+$s-base-padding: 30px;
+$s-mobile-margin: 20px;
+$s-section-padding: 90px;
+$s-input-padding-side: 14px;
+$s-form-elem-height: 50px;
+$s-navigation-height: 70px;
+$s-modal-padding: 50px;
+$s-modal-mobile-padding: 40px;
+
+// Breakpoints
+$b-mobile: 450px;
+$b-tablet: 800px;
+$b-modal-tablet: 600px;
+$b-tablet-menu: 1000px;
+$b-full: 1400px;
+$b-mobile-menu: 780px;
+
+//Grid Breakpoints
+$b-grid-2: 575px;
+$b-grid-3: 870px;
+$b-grid-4: 1150px;
+
+// Ease
+$animation-transition: cubic-bezier(1, -0.02, 0.695, 0.79);
+$animation-hero: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$animation-time: 0.65s;
+
+//ant
+$s-steps-width: 90%;

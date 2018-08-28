@@ -1,0 +1,107 @@
+
+ul {
+  list-style-type: none;
+}
+
+.Button {
+  width: 160px;
+  height: 50px;
+  border-radius: 100px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $open-sans;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
+  @include trans(background-color, color);
+  border: 1px solid $c-primary;
+  background: $c-primary;
+}
+
+.Button:hover {
+  background-color: white;
+  color: $c-primary;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: $c-primary;
+}
+
+.ant-steps-item-icon > .ant-steps-icon {
+  color: $c-primary;
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+  color: white;
+  background: white;
+  border-color: $c-primary;
+}
+
+.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
+  color: $c-primary;
+}
+.ant-btn-primary {
+  color: #fff;
+  background-color: $c-primary;
+  border-color: $c-primary;
+}
+
+.ant-btn-primary:hover {
+  color: $c-primary;
+  background-color: white;
+  border-color: white;
+}
+
+.ant-btn-primary:focus {
+  color: #fff;
+  background-color: $c-primary;
+  border-color: $c-primary;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+  color: white;
+  background: white;
+  border-color: $c-primary;
+}
+
+.ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-title:after {
+  background-color: $c-primary;
+}
+
+.ant-slider-handle {
+  border: 2px solid $c-primary;
+}
+
+.ant-slider-track {
+  background-color: #deb6ea;
+}
+
+.ant-slider-handle:focus {
+  border-color: $c-primary;
+  -webkit-box-shadow: 0 0 0 5px #deb6ea;
+  box-shadow: 0 0 0 5px #deb6ea;
+  outline: none;
+}
+
+
+.ant-input-number:focus {
+  border-color: $c-primary;
+}
+.ant-input-number:hover {
+  border-color: #deb6ea;
+}
+
+.ant-slider:hover .ant-slider-track {
+  background-color: #deb6ea;
+}
+
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: $c-primary;
+}
+
+.ant-slider-handle.ant-tooltip-open {
+  border-color: $c-primary;
+}

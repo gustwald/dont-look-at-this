@@ -1,0 +1,21 @@
+.Navigation{
+    height: $s-navigation-height;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+}
+
+.Navigation-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $s-navigation-height;
+}
+
+.Navigation-list-item{
+    text-transform: uppercase;
+    font-family: $roboto;
+    padding: 0 20px;
+    color: black;
+}

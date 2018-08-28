@@ -1,0 +1,13 @@
+.Grid {
+    max-width: $s-grid-width;
+    padding: 0 $s-mobile-margin;
+
+    @include b($b-tablet) {
+       padding: 0 $s-base-margin; 
+    }
+
+    @include b(#{$s-grid-width + ($s-base-margin * 2)}) {
+        margin: 0 auto;
+        padding: 0;
+    }
+}

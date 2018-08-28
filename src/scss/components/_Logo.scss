@@ -1,0 +1,21 @@
+.logo {
+    position: absolute;
+    top: 0;
+    margin: 20px;
+    width: 150px;
+    opacity: 1;
+
+    &--loaded {
+        opacity: 1;
+    }
+
+    transition: opacity 5s ease-in-out;
+}
+@media (min-width: 0) and (max-width: 450px) {
+    .logo {
+      right:0;
+      width: 100px;
+      margin: 10px;
+    }
+    
+}

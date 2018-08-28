@@ -1,0 +1,42 @@
+@mixin b($width) {
+    @media (min-width: $width) { @content; }
+}
+
+@mixin bm($min, $max) {
+    @media (min-width: $min) and (max-width: $max) { @content; }
+}
+
+@mixin size($size) {
+    height: $size;
+    width: $size;
+}
+
+@mixin trans($props...) {
+    $unfoldedTransitions:();
+
+    @each $prop in $props {
+        $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($prop), comma);
+    }
+
+    transition: $unfoldedTransitions;
+}
+
+
+@function unfoldTransition ($prop) {
+    $duration: .25s;
+    $easing: $animation-transition;
+    $defaultProperties: ($prop, $duration, $easing);
+
+    $unfoldedTransition: ();
+    @for $i from 1 through length($defaultProperties) {
+        $p: null;
+        @if $i <= length($prop) {
+            $p: nth($prop, $i)
+        } @else {
+            $p: nth($defaultProperties, $i)
+        }
+        $unfoldedTransition: append($unfoldedTransition, $p);
+    }
+
+    @return $unfoldedTransition;
+}
