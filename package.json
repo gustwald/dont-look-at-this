@@ -29,7 +29,8 @@
     "eject": "react-scripts eject",
     "client": "yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" \"yarn watch-css\" "
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" \"yarn watch-css\" ",
+    "prod": "yarn build && yarn dev"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
