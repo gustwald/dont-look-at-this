@@ -225,7 +225,12 @@ body{
 
 
   @media (min-width: 0) and (max-width: 450px) {
-
+    .spinner {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: calc(50% - 20px);
+    }
     .notFound {
       text-align: center;
       width: 70%;
