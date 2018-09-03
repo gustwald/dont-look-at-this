@@ -226,6 +226,18 @@ body{
 
   @media (min-width: 0) and (max-width: 450px) {
 
+    .notFound {
+      text-align: center;
+      width: 70%;
+      h2 {
+        margin-bottom: 20px;
+
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+
 .introText {
     font-size: 42px;
     padding-left:30px;

@@ -1,14 +1,12 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const path = require('path');
 const parseString = require('xml2js').parseString;
 const schedule = require('node-schedule');
 const app = express();
 const port = process.env.PORT || 2000;
 
 const feed = 'https://www.kondomvaruhuset.se/media/export/kondomstorlek_test.xml';
-
-const rule = new schedule.RecurrenceRule();
-rule.dayOfWeek = 6;
 
 app.get('/api/hello', (req, res) => {
   fetch(feed)
@@ -20,5 +18,7 @@ app.get('/api/hello', (req, res) => {
   }));
 
 });
+
+// app.use(express.static(path.join(__dirname, '../public')));
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

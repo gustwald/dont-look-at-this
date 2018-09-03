@@ -3,16 +3,9 @@ export const callApi = async () => {
   const body = await response.json();
 
   if (response.status !== 200) {
-    //error hantera
-    this.setState({
-      error: body.message
-    });
+   console.log('error - somehting wehnt wrong when getting condoms');
   } else {
     const condoms = body.data;
     return condoms;
   }
 };
-
-export const manipulateData = (data) => {
-
-}

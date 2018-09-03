@@ -201,6 +201,14 @@ ul {
 .Condoms-img:hover {
   transform: scale(1.1); }
 
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .notFound p {
+    color: black; }
+
 .Navigation {
   height: 70px;
   width: 100%;
@@ -409,6 +417,13 @@ body {
   color: #d380ea; }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .notFound {
+    text-align: center;
+    width: 70%; }
+    .notFound h2 {
+      margin-bottom: 20px; }
+    .notFound p {
+      font-size: 18px; }
   .introText, .introTextSecond {
     font-size: 42px;
     padding-left: 30px;

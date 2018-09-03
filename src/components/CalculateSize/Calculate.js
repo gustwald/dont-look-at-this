@@ -49,7 +49,6 @@ class Calculate extends Component {
     if(count === 0){
       return 'neutral_face'
     }
-    console.log(count)
     if(count <= 5) {
       return 'expressionless'
     } 
@@ -74,6 +73,7 @@ class Calculate extends Component {
     this.setState({
       girthValue: value
     });
+    console.log(this.state.girthValue);
   };
 
   onLengthChange = value => {
