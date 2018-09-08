@@ -31,6 +31,14 @@
 
 .measurements--text {
     font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 12px;
+        color: #bd07ef;
+    }
     img {
         width:30px;
         margin-left: 10px;

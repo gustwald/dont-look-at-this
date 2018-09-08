@@ -9,7 +9,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.Condoms-child-mobile{
+  display: none;
+}
 .Condoms-container {
   margin-top: 20vh;
 }
@@ -41,5 +43,31 @@
   flex-direction: column;
   p{
     color: black;
+  }
+}
+
+.Condoms-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 0) and (max-width: 450px) {
+  .Condoms {
+    a {
+      width: 100%;
+    }
+  }
+  .Condoms-child-mobile {
+    display: block;
+    color: black;
+  }
+  .Condoms-child {
+    flex-direction: row;
+  }
+  .Condoms-img {
+    width: 200px;
+    height: 200px;
   }
 }

@@ -94,6 +94,19 @@ ul {
 .ant-slider-handle.ant-tooltip-open {
   border-color: #bd07ef; }
 
+.ant-modal-footer > div > :first-child {
+  display: none; }
+
+.ant-modal-footer > div > :nth-child(2):hover {
+  background: #bd07ef;
+  color: white; }
+
+.ant-modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; }
+
 .Grid {
   max-width: 1200px;
   padding: 0 20px; }
@@ -179,6 +192,9 @@ ul {
   flex-wrap: wrap;
   justify-content: center; }
 
+.Condoms-child-mobile {
+  display: none; }
+
 .Condoms-container {
   margin-top: 20vh; }
 
@@ -208,6 +224,24 @@ ul {
   flex-direction: column; }
   .notFound p {
     color: black; }
+
+.Condoms-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center; }
+
+@media (min-width: 0) and (max-width: 450px) {
+  .Condoms a {
+    width: 100%; }
+  .Condoms-child-mobile {
+    display: block;
+    color: black; }
+  .Condoms-child {
+    flex-direction: row; }
+  .Condoms-img {
+    width: 200px;
+    height: 200px; } }
 
 .Navigation {
   height: 70px;
@@ -269,7 +303,13 @@ ul {
   margin-bottom: 3em; }
 
 .measurements--text {
-  font-size: 28px; }
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .measurements--text span {
+    font-size: 12px;
+    color: #bd07ef; }
   .measurements--text img {
     width: 30px;
     margin-left: 10px; }
@@ -445,3 +485,15 @@ body {
     padding-top: 20px; }
   .Condoms-container {
     margin-top: 20px; } }
+
+.modalWidth {
+  width: 300px; }
+
+.socials {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  padding: 10px; }
+  .socials > a > img {
+    width: 20px;
+    margin-left: 5px; }

@@ -269,3 +269,18 @@ body{
     margin-top: 20px;
   }
 }
+
+.modalWidth {
+  width: 300px;
+}
+
+.socials{
+  position: fixed !important;
+  bottom:0;
+  right: 0;
+  padding: 10px;
+  > a > img {
+    width: 20px;
+    margin-left: 5px;
+  }
+}

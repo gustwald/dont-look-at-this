@@ -105,3 +105,18 @@ ul {
 .ant-slider-handle.ant-tooltip-open {
   border-color: $c-primary;
 }
+
+.ant-modal-footer > div > :first-child{
+  display: none;
+}
+.ant-modal-footer > div > :nth-child(2):hover{
+  background:#bd07ef;
+  color: white;
+}
+
+.ant-modal-body {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
