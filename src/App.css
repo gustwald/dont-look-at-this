@@ -484,13 +484,16 @@ body {
   .Calculate {
     padding-top: 20px; }
   .Condoms-container {
-    margin-top: 20px; } }
+    margin-top: 40px; } }
 
 .modalWidth {
   width: 300px; }
 
-.fb-share-button {
-  position: absolute !important;
+.socials {
+  position: fixed !important;
   bottom: 0;
   right: 0;
-  padding: 20px; }
+  padding: 10px; }
+  .socials > a > img {
+    width: 20px;
+    margin-left: 5px; }

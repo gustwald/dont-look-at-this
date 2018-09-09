@@ -24,30 +24,20 @@ class Condoms extends Component {
   render() {
     const menu = (
       <Menu onClick={this.onClick}>
-        <Menu.Item key="1">Tunnhet</Menu.Item>
-        <Menu.Item key="2">Latexfria</Menu.Item>
+        <Menu.Item key="thickness">Tunnhet</Menu.Item>
+        <Menu.Item key="material">Latexfria</Menu.Item>
         <Menu.Item key="3">3rd menu item</Menu.Item>
       </Menu>
     );
     const condoms = this.props.returnedCondoms;
-    // const length = this.state.lengthValue;
     const girth = this.state.girthValue;
     // const items = condoms.filter(condom => parseInt(condom.condom_girth) >= girth );
 
-    
+    // const latexOnly = condoms.filter(condom => !condom.condom_materials.toLowerCase().contains('latex'));
 
     const removedLube = condoms.filter(condom => {
       console.log(girth);
       if(condom.condom_girth){
-
-        //  const g = condom.condom_girth;
-        //  const strippedG = g.replace(/\D/g,'');
-        // const parsedG = parseInt(strippedG) / 10;
-
-        // console.log(parsedG);
-
-        // return (parsedG - 0.5 >= girth || parsedG + 0.5 <= girth);
-        // return (girth <= (parsedG + 0.5) );
         return condom;
       }
       
@@ -88,7 +78,7 @@ class Condoms extends Component {
               <p>Omkrets: {parseInt(condom.condom_girth) / 10 + 'cm'}</p>
               <p>Längd: {parseInt(condom.condom_length) / 10 + 'cm'}</p>
             </div>}>
-            <a href={condom.url_key}>
+            <a href={condom.url_key} target="_blank">
             <div key={i} className="Condoms-child">
               
                 {/* {condom.name.replace(" - Kondomer", "")} */}
@@ -100,11 +90,9 @@ class Condoms extends Component {
               <p>Material: {condom.condom_materials}</p>
               <p>Omkrets: {parseInt(condom.condom_girth) / 10 + 'cm'}</p>
               <p>Längd: {parseInt(condom.condom_length) / 10 + 'cm'}</p>
+              <p>Tunnhet: {condom.condom_thickness}</p>
               </div>
-         
-              {/* <p>Material: {condom.condom_material}</p>
-              <p>Omkrets: {parseInt(condom.condom_girth) / 10 + 'cm'}</p>
-              <p>Längd: {parseInt(condom.condom_length) / 10 + 'cm'}</p> */}
+      
             </div>
             </a>
             </Popover>
