@@ -238,7 +238,8 @@ ul {
     display: block;
     color: black; }
   .Condoms-child {
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: flex-start; }
   .Condoms-img {
     width: 200px;
     height: 200px; } }

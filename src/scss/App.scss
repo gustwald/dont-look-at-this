@@ -1,6 +1,6 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto.');
@@ -23,81 +23,80 @@ $roboto: 'Roboto', sans-serif;
 @import 'components/_HowToMeasure';
 
 .App {
-    padding: 10px;
+  padding: 10px;
 }
-html{
-    height: 100%;
-  }
+html {
+  height: 100%;
+}
 
-  .calculate {
-    margin: 0 auto;
-  }
+.calculate {
+  margin: 0 auto;
+}
 
 .introText {
-    font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-      font-size: 56px;
-      text-align: center;
-      line-height: 1.2;
-      text-transform: uppercase;
-      padding-top:70px;
-  }
-  .introTextSecond {
-      @extend .introText;
-      padding-top:0.5em;
-  }
-  .subText {
-    font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-      font-size: 26px;
-      text-align: center;
-  }
-  
-  .intro {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding-top: 70px;
+}
+.introTextSecond {
+  @extend .introText;
+  padding-top: 0.5em;
+}
+.subText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-align: center;
+}
 
-  .calculate-cta {
-      width: 100px;
-      height: 40px;
-      border-radius: 4px;
-      background: purple;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-      font-family: 'Open-sans', sans-serif;
-      font-weight: 400;
-      letter-spacing: 2px;
-      margin-top: 30px;
-  }
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculate-cta {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background: purple;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Open-sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-$background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
-$purple: #bd07f0 ;
+$background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
+$purple: #bd07f0;
 $lightPurple: #d15bf1;
 // $yellow: #f1c83c;
 $shadow: #533d4a;
 
-html{
+html {
   height: 100%;
 }
 
-body{
+body {
   font-family: 'Fjalla One', sans-serif;
-//   background: #ec008c;  /* fallback for old browsers */
-// background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  //   background: #ec008c;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.container{
+.container {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -108,82 +107,80 @@ body{
   max-width: 225px;
 }
 
-.introBtn{
-    // font-family: 'Lato', sans-serif;
-//     margin-top:30px;
-//   text-transform: uppercase;
-//   opacity: 0;
-//   visibility: hidden;
-//   cursor: pointer;
-//   color: $purple;
-//   background: $purple;
-//   border-radius: 50px;
-//   padding: 15px 10px;
+.introBtn {
+  // font-family: 'Lato', sans-serif;
+  //     margin-top:30px;
+  //   text-transform: uppercase;
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   cursor: pointer;
+  //   color: $purple;
+  //   background: $purple;
+  //   border-radius: 50px;
+  //   padding: 15px 10px;
 }
 
 .measure {
-    width: 70px;
-    animation: float 3s ease-in-out infinite;
-    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-    margin-top: 30px;
-    cursor: pointer;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      padding: 0 5px;
-    }
-    
+  width: 70px;
+  animation: float 3s ease-in-out infinite;
+  // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  margin-top: 30px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    padding: 0 5px;
+  }
 }
 .measure-container {
   border-radius: 50%;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
   animation: pulse 2s infinite;
-
 }
 @keyframes float {
-	0% {
-		// box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		// box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-10px);
-	}
-	100% {
-		// box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+  0% {
+    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    // box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
 }
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
   70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
   }
   100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
   70% {
-      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
   }
   100% {
-      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
 
-.introHeading{
+.introHeading {
   color: #fff;
   text-transform: uppercase;
   font-size: 42px;
@@ -192,18 +189,19 @@ body{
   letter-spacing: 2px;
 }
 
-.title{
+.title {
   transform: translateX(-50%) rotate(-10deg);
   display: block;
   float: left;
   left: 50%;
   position: relative;
-  
+
   span {
     transform: skew(-10deg);
     display: block;
     float: left;
-    text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px, $shadow 5px 5px, $shadow 6px 6px;
+    text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px,
+      $shadow 4px 4px, $shadow 5px 5px, $shadow 6px 6px;
     min-width: 10px;
     min-height: 10px;
     position: relative;
@@ -211,58 +209,56 @@ body{
   }
 }
 
-.title{
-  &:nth-child(1){
+.title {
+  &:nth-child(1) {
     color: #d380ea;
   }
-  &:nth-child(2){
-    color: #d15bf1;;
+  &:nth-child(2) {
+    color: #d15bf1;
   }
-  &:nth-child(3){
+  &:nth-child(3) {
     color: #d380ea;
   }
 }
 
-
-  @media (min-width: 0) and (max-width: 450px) {
-    .spinner {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: calc(50% - 20px);
+@media (min-width: 0) and (max-width: 450px) {
+  .spinner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: calc(50% - 20px);
+  }
+  .notFound {
+    text-align: center;
+    width: 70%;
+    h2 {
+      margin-bottom: 20px;
     }
-    .notFound {
-      text-align: center;
-      width: 70%;
-      h2 {
-        margin-bottom: 20px;
-
-      }
-      p {
-        font-size: 18px;
-      }
+    p {
+      font-size: 18px;
     }
+  }
 
-.introText {
+  .introText {
     font-size: 42px;
-    padding-left:30px;
+    padding-left: 30px;
     padding-right: 30px;
   }
   .measurements {
-      flex-direction: column;
-      .child {
-        width: 300px;
-        p{
-          margin-bottom: 20px;
-        }
+    flex-direction: column;
+    .child {
+      width: 300px;
+      p {
+        margin-bottom: 20px;
       }
+    }
   }
   .howTomeasure {
     margin-top: 5vh;
   }
 
   .Calculate {
-    padding-top:20px;
+    padding-top: 20px;
   }
 
   .Condoms-container {
@@ -274,13 +270,21 @@ body{
   width: 300px;
 }
 
-.socials{
+.socials {
   position: fixed !important;
-  bottom:0;
+  bottom: 0;
   right: 0;
   padding: 10px;
   > a > img {
     width: 20px;
     margin-left: 5px;
+  }
+}
+
+.howtospan {
+  margin-left: 2px;
+  margin-top: 3px;
+  &:hover {
+    cursor: pointer;
   }
 }
