@@ -25,13 +25,12 @@ class Condoms extends Component {
   }
 
   onClick = ({ key }) => {
-    console.log(key);
     if (key === 'latexfree') {
-      this.setState({ material: 'Latex', filter: 'Latexfree' });
+      this.setState({ material: 'latexfree', filter: 'Latexfree' });
     } else if (key === 'all') {
       this.setState({ material: '', filter: '' });
     } else if (key == 'thickness') {
-      this.setState({ feature: 'Extra tunna', filter: 'thickness' });
+      this.setState({ material: 'thickness', filter: 'thickness' });
     }
   };
 
@@ -59,51 +58,41 @@ class Condoms extends Component {
     );
     const condoms = this.props.returnedCondoms;
     const girth = this.state.girthValue;
-    // const items = condoms.filter(condom => parseInt(condom.condom_girth) >= girth );
 
-    // const latexOnly = condoms.filter(condom => !condom.condom_materials.toLowerCase().contains('latex'));
-    console.log(this.state.material);
-    const removedLube = condoms.filter(condom => {
-      console.log(girth);
-      if (condom.condom_girth) {
-        return condom;
-      }
-    });
-    console.log(material);
-    const items = removedLube
+    const allItems = condoms
+      .filter(condom => condom.condom_girth)
       .filter(condom => {
         const g = condom.condom_girth;
         const strippedG = g.replace(/\D/g, '');
         const parsedG = parseInt(strippedG) / 10;
         const totalG = girth + 0.4;
         if (parsedG < totalG && parsedG > girth) {
-          return condom;
+          return true;
         }
-      })
+        return false;
+      });
+
+    const items = allItems
       .filter(condom => {
-        if (material !== '' && condom.condom_materials === material) {
-        } else {
-          console.log('ingen filtrering');
-          return condom;
+        if (material === '') return true;
+        else if (material === 'latexfree') {
+          return condom.condom_materials !== 'Latex';
+        } else if (material === 'thickness') {
+          return condom.condom_features.includes('Extra tunna');
         }
-      })
-      .filter(condom => {
-        if (feature !== '' && condom.condom_features !== feature) {
-        } else {
-          return condom;
-        }
+
+        return false;
       })
       .sort(
         (a, b) => parseInt(b.condom_marginal) - parseInt(a.condom_marginal),
       );
 
-    console.log(items);
     return (
       <div className="Condoms-container">
         {this.state.isFetching ? null : (
           <div className="Condoms-menu">
-            {items.length !== 0 ? <h1>Ditt resultat:</h1> : null}
-            {items.length > 1 ? (
+            {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
+            {allItems.length > 1 ? (
               <div>
                 <Dropdown overlay={menu}>
                   <span className="ant-dropdown-link">
@@ -120,7 +109,6 @@ class Condoms extends Component {
         )}
 
         <div className="Condoms">
-          {/* <h1>Ditt resultat:</h1> */}
           {this.state.isFetching ? (
             <Loader />
           ) : items.length !== 0 ? (
@@ -143,8 +131,6 @@ class Condoms extends Component {
                 >
                   <a href={condom.url_key} target="_blank">
                     <div key={i} className="Condoms-child">
-                      {/* {condom.name.replace(" - Kondomer", "")} */}
-
                       <img src={condom.image} className="Condoms-img" />
 
                       <div className="Condoms-child-mobile">

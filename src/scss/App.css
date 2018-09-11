@@ -288,7 +288,8 @@ ul {
   align-items: center; }
   .howTomeasure .measure-gif {
     width: 300px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    height: 225px; }
   .howTomeasure h1 {
     font-size: 36px; }
   .howTomeasure .measurements {
