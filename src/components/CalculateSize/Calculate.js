@@ -95,10 +95,10 @@ class Calculate extends Component {
         {this.state.showCalculations ? (
           <div className="Calculate" id="calculate">
             <div className="Calculate-condomSize-item">
-              <p>
+              <p className="measureindex">
                 Längd <img src={ruler} alt="length" />
               </p>
-
+              <h1 className="numberindex">{`${this.state.lengthValue} cm`}</h1>
               <Slider
                 min={0}
                 max={30}
@@ -106,13 +106,13 @@ class Calculate extends Component {
                 value={this.state.lengthValue}
                 tipFormatter={formatter}
               />
-              <h1>{`${this.state.lengthValue} cm`}</h1>
             </div>
             <div className="Calculate-condomSize-item Calculate-condomSize-item--girth">
-              <p>
+              <p className="measureindex">
                 Omkrets <img src={compass} alt="girth" />
               </p>
 
+              <h1 className="numberindex">{`${this.state.girthValue} cm`}</h1>
               <Slider
                 min={6}
                 max={20}
@@ -121,7 +121,6 @@ class Calculate extends Component {
                 tipFormatter={formatter}
                 step={0.2}
               />
-              <h1>{`${this.state.girthValue} cm`}</h1>
               <div className="emoji">
                 <Emoji emoji={{ id: emoji, skin: 3 }} size={64} />
               </div>

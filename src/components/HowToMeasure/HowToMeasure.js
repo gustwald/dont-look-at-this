@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calculate from '../CalculateSize/Calculate';
 import { Modal, Icon } from 'antd';
-import howto from '../../icons/howto.gif';
+import howto from '../../icons/howtomeasure.gif';
 
 import howToGirth from '../../icons/measure-tool2-girth2.gif';
 import howToLength from '../../icons/measure-tool2-length2.gif';
@@ -58,37 +58,41 @@ class HowToMeasure extends Component {
               <div className="child length">
                 <h3 className="measurements--text">
                   Längd{' '}
-                  <Icon
-                    type="info-circle"
-                    onClick={this.showWidthModal}
-                    className="howtospan"
-                    style={{ fontSize: '16px' }}
-                    onClick={this.showWidthModal}
-                    theme="twoTone"
-                    twoToneColor="#d15bf1"
-                  />
+                  <span className="iconspan">
+                    <Icon
+                      type="info-circle"
+                      onClick={this.showWidthModal}
+                      className="howtospan"
+                      style={{ fontSize: '16px' }}
+                      onClick={this.showWidthModal}
+                      theme="twoTone"
+                      twoToneColor="#d15bf1"
+                    />
+                  </span>
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amoet Lorem ipsum dolor sit amoet Lorem
-                  ipsum dolor sit amoet Lorem ipsum dolor sit amoet
+                  Mät från roten till toppen på snoppens ovansida (erigerad).
+                  Använd linjal eller måttband.
                 </p>
               </div>
               <div className="child girth">
                 <h3 className="measurements--text">
                   Omkrets{' '}
-                  <Icon
-                    type="info-circle"
-                    onClick={this.showWidthModal}
-                    className="howtospan"
-                    style={{ fontSize: '16px' }}
-                    onClick={this.showGirthModal}
-                    theme="twoTone"
-                    twoToneColor="#d15bf1"
-                  />
+                  <span className="iconspan">
+                    <Icon
+                      type="info-circle"
+                      onClick={this.showWidthModal}
+                      className="howtospan"
+                      style={{ fontSize: '16px' }}
+                      onClick={this.showGirthModal}
+                      theme="twoTone"
+                      twoToneColor="#d15bf1"
+                    />
+                  </span>
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amoet Lorem ipsum dolor sit amoet Lorem
-                  ipsum dolor sit amoet Lorem ipsum dolor sit amoet
+                  Ta ett snöre och linda den runt den tjockaste delen av snoppen
+                  (erigerad), mät sedan längden på snöret.
                 </p>
               </div>
             </div>

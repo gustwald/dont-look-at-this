@@ -5,9 +5,9 @@
 .Calculate {
   width: 100%;
   // background: #deb6ea;
-  height: 100vh;
+  // height: 100vh;
   padding: 80px 200px;
-  @include bm(0,$b-mobile){
+  @include bm(0, $b-mobile) {
     padding: 10px;
   }
 }
@@ -19,9 +19,9 @@
 }
 .Calculate-condomSize-item {
   // width: 300px;
-  
+
   text-align: left;
-  p{
+  p {
     font-size: 26px;
     font-weight: 400;
     font-family: 'Open-sans', sans-serif;
@@ -43,7 +43,6 @@
 .Calculate-condomSize-item--length {
   height: 180px;
 }
-
 
 .calculate-steps {
   display: flex;
@@ -68,7 +67,7 @@
   text-align: center;
   // width: $s-steps-width;
   width: 100%;
-  overflow:scroll;
+  overflow: scroll;
   display: flex;
   // align-items: center;
 }
@@ -83,12 +82,11 @@
 }
 
 @media (min-width: 0) and (max-width: 450px) {
-
 }
 
 .emoji {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }

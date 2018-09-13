@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.Condoms-child-mobile{
+.Condoms-child-mobile {
   display: none;
 }
 .Condoms-container {
@@ -32,7 +32,7 @@
   background-size: contain;
   transition: transform 0.3s ease-in-out;
 }
-.Condoms-img:hover{
+.Condoms-img:hover {
   transform: scale(1.1);
 }
 
@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  p{
+  p {
     color: black;
   }
 }
@@ -70,5 +70,8 @@
   .Condoms-img {
     width: 200px;
     height: 200px;
+  }
+  .Condoms-img:hover {
+    transform: scale(1);
   }
 }

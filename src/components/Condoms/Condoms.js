@@ -94,7 +94,7 @@ class Condoms extends Component {
             {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
             {allItems.length > 1 ? (
               <div>
-                <Dropdown overlay={menu}>
+                <Dropdown overlay={menu} trigger={['click']}>
                   <span className="ant-dropdown-link">
                     Filtrera på{' '}
                     <span style={{ color: '#d15bf1' }}>

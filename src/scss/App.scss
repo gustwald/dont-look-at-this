@@ -121,13 +121,12 @@ body {
 }
 
 .measure {
-  width: 70px;
+  width: 300px;
   animation: float 3s ease-in-out infinite;
   // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
   margin-top: 30px;
   cursor: pointer;
   text-align: center;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,6 +221,26 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .measureindex {
+    margin: 0;
+  }
+  .emoji {
+    margin-bottom: 10px;
+  }
+  .numberindex {
+    margin-bottom: 10px;
+  }
+  .howTomeasure > h1 {
+    margin-bottom: 0;
+  }
+  img.measure-gif {
+    height: 180px !important;
+    margin-bottom: 10px !important;
+    width: 260px !important;
+  }
+  .measurements--text {
+    margin-bottom: 10px;
+  }
   .spinner {
     position: absolute;
     top: 50%;
@@ -249,16 +268,12 @@ body {
     .child {
       width: 300px;
       p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
   }
   .howTomeasure {
-    margin-top: 5vh;
-  }
-
-  .Calculate {
-    padding-top: 20px;
+    margin-top: 3vh;
   }
 
   .Condoms-container {
@@ -282,8 +297,8 @@ body {
 }
 
 .howtospan {
-  margin-left: 2px;
-  margin-top: 3px;
+  position: absolute;
+  top: -20px;
   &:hover {
     cursor: pointer;
   }

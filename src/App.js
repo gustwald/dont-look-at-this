@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   showSteps = () => {
-    this.setState({ showSteps: true, showIntro: false });      
+    this.setState({ showSteps: true, showIntro: false });
   };
 
   render() {
@@ -38,16 +38,31 @@ class App extends Component {
               <span className="title">snopp</span>
               <span className="title">har du?</span>
             </h1>
-            <h4 className="measure" onClick={this.showSteps}>Klicka här för att komma igång<Emoji emoji={{ id: 'eggplant'}} size={20} /></h4>
+            <h4 className="measure" onClick={this.showSteps}>
+              Klicka här för att komma igång
+              <Emoji emoji={{ id: 'eggplant' }} size={20} />
+            </h4>
           </section>
         ) : null}
         {showSteps ? <HowToMeasure /> : null}
         <div className="socials">
-<div className="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">Dela</a></div>
-
-        {/* <a href="#"><img class="insta" src={insta} alt="alt" /></a> */}
+          <div
+            className="fb-share-button"
+            data-href="https://condomsizecalculator.com/"
+            data-layout="button"
+            data-size="small"
+            data-mobile-iframe="true"
+          >
+            <a
+              target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcondomsizecalculator.com%2F&amp;src=sdkpreparse"
+              className="fb-xfbml-parse-ignore"
+            >
+              Dela
+            </a>
+          </div>
+          {/* <a href="#"><img class="insta" src={insta} alt="alt" /></a> */}
         </div>
-
       </div>
     );
   }
