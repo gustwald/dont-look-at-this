@@ -16,7 +16,6 @@ class Condoms extends Component {
     filter: '',
   };
   componentWillReceiveProps(newProps) {
-    console.log(newProps);
     this.setState({
       girthValue: newProps.girth,
       lengthValue: newProps.length,
@@ -57,8 +56,7 @@ class Condoms extends Component {
       </Menu>
     );
     const condoms = this.props.returnedCondoms;
-    const girth = this.state.girthValue;
-
+    const girth = this.props.girth;
     const allItems = condoms
       .filter(condom => condom.condom_girth)
       .filter(condom => {
@@ -89,29 +87,25 @@ class Condoms extends Component {
 
     return (
       <div className="Condoms-container">
-        {this.state.isFetching ? null : (
-          <div className="Condoms-menu">
-            {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
-            {allItems.length > 1 ? (
-              <div>
-                <Dropdown overlay={menu} trigger={['click']}>
-                  <span className="ant-dropdown-link">
-                    Filtrera på{' '}
-                    <span style={{ color: '#d15bf1' }}>
-                      {this.filter(filter)}
-                    </span>
-                    <Icon type="down" />
+        <div className="Condoms-menu">
+          {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
+          {allItems.length > 1 ? (
+            <div>
+              <Dropdown overlay={menu} trigger={['click']}>
+                <span className="ant-dropdown-link">
+                  Filtrera på{' '}
+                  <span style={{ color: '#d15bf1' }}>
+                    {this.filter(filter)}
                   </span>
-                </Dropdown>
-              </div>
-            ) : null}
-          </div>
-        )}
+                  <Icon type="down" />
+                </span>
+              </Dropdown>
+            </div>
+          ) : null}
+        </div>
 
         <div className="Condoms">
-          {this.state.isFetching ? (
-            <Loader />
-          ) : items.length !== 0 ? (
+          {items.length !== 0 ? (
             items.map((condom, i) => {
               return (
                 <Popover

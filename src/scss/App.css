@@ -126,7 +126,7 @@ ul {
   padding: 80px 200px; }
   @media (min-width: 0) and (max-width: 450px) {
     .Calculate {
-      padding: 10px; } }
+      padding: 30px; } }
 
 .Calculate-condomSize {
   display: flex;

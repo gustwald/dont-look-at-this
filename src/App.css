@@ -123,11 +123,10 @@ ul {
 
 .Calculate {
   width: 100%;
-  height: 100vh;
   padding: 80px 200px; }
   @media (min-width: 0) and (max-width: 450px) {
     .Calculate {
-      padding: 10px; } }
+      padding: 30px; } }
 
 .Calculate-condomSize {
   display: flex;
@@ -242,7 +241,9 @@ ul {
     justify-content: flex-start; }
   .Condoms-img {
     width: 200px;
-    height: 200px; } }
+    height: 200px; }
+  .Condoms-img:hover {
+    transform: scale(1); } }
 
 .Navigation {
   height: 70px;
@@ -304,6 +305,9 @@ ul {
 .child p {
   margin-bottom: 3em; }
 
+.iconspan {
+  position: relative; }
+
 .measurements--text {
   font-size: 28px;
   display: flex;
@@ -314,11 +318,6 @@ ul {
   .measurements--text img {
     width: 30px;
     margin-left: 10px; }
-
-@media (min-width: 0) and (max-width: 450px) {
-  .measure-gif {
-    margin-bottom: 10px;
-    height: 400px; } }
 
 .App {
   padding: 10px; }
@@ -462,6 +461,20 @@ body {
   color: #d380ea; }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .measureindex {
+    margin: 0; }
+  .emoji {
+    margin-bottom: 10px; }
+  .numberindex {
+    margin-bottom: 10px; }
+  .howTomeasure > h1 {
+    margin-bottom: 0; }
+  img.measure-gif {
+    height: 180px !important;
+    margin-bottom: 10px !important;
+    width: 260px !important; }
+  .measurements--text {
+    margin-bottom: 10px; }
   .spinner {
     position: absolute;
     top: 50%;
@@ -483,11 +496,9 @@ body {
     .measurements .child {
       width: 300px; }
       .measurements .child p {
-        margin-bottom: 20px; }
+        margin-bottom: 10px; }
   .howTomeasure {
-    margin-top: 5vh; }
-  .Calculate {
-    padding-top: 20px; }
+    margin-top: 3vh; }
   .Condoms-container {
     margin-top: 40px; } }
 
@@ -504,7 +515,7 @@ body {
     margin-left: 5px; }
 
 .howtospan {
-  margin-left: 2px;
-  margin-top: 3px; }
+  position: absolute;
+  top: -20px; }
   .howtospan:hover {
     cursor: pointer; }

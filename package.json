@@ -29,12 +29,11 @@
     "eject": "react-scripts eject",
     "client": "yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" \"yarn watch-css\" ",
+    "dev": "concurrently --kill-others-on-fail \"yarn client\" \"yarn watch-css\" ",
     "prod": "react-scripts build && node server.js",
     "parse": "node parser.js"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
-  },
-  "proxy": "http://localhost:2000/"
+  }
 }

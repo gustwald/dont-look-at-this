@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import { Emoji } from 'emoji-mart';
 import { callApi } from '../../utils/data';
 import Condoms from '../Condoms/Condoms';
+import kondomer from '../../condoms.json';
 import Loader from '../Loader/Loader';
 import text from '../../utils/text';
 import ruler from '../../icons/ruler-1.svg';
@@ -35,19 +36,16 @@ class Calculate extends Component {
       showCondoms: true,
       showCalculations: false,
     });
-    const condoms = callApi();
-    condoms.then(data => {
-      const retCondoms = data.rss.feed[0].Product;
-      const values = retCondoms.map(condom => {
-        const condomProps = {};
-        for (let prop in condom) {
-          condomProps[prop] = condom[prop][0];
-        }
-        return condomProps;
-      });
-      this.setState({ condoms: values, loading: false });
-      console.log(this.state.condoms);
+
+    const retCondoms = kondomer.rss.feed[0].Product;
+    const values = retCondoms.map(condom => {
+      const condomProps = {};
+      for (let prop in condom) {
+        condomProps[prop] = condom[prop][0];
+      }
+      return condomProps;
     });
+    this.setState({ condoms: values, loading: false });
   };
   getEmoji = count => {
     if (count === 0) {

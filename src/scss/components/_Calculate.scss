@@ -8,7 +8,7 @@
   // height: 100vh;
   padding: 80px 200px;
   @include bm(0, $b-mobile) {
-    padding: 10px;
+    padding: 30px;
   }
 }
 .Calculate-condomSize {
@@ -49,11 +49,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  // width: $s-steps-width;
-}
-
-.ant-steps {
-  //  width: $s-steps-width;
 }
 
 .steps-content {
@@ -65,11 +60,9 @@
   min-height: 70vh;
   max-height: 70vh;
   text-align: center;
-  // width: $s-steps-width;
   width: 100%;
   overflow: scroll;
   display: flex;
-  // align-items: center;
 }
 
 .steps-action {
@@ -79,9 +72,6 @@
 .section {
   height: 100vh;
   width: 100%;
-}
-
-@media (min-width: 0) and (max-width: 450px) {
 }
 
 .emoji {
