@@ -107,6 +107,9 @@ ul {
   align-items: center;
   padding: 0; }
 
+.ant-dropdown-menu-item {
+  z-index: 999; }
+
 .Grid {
   max-width: 1200px;
   padding: 0 20px; }
@@ -461,6 +464,10 @@ body {
   color: #d380ea; }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .youSearched {
+    position: absolute;
+    top: 10px;
+    font-size: 14px; }
   .measureindex {
     margin: 0; }
   .emoji {

@@ -64,7 +64,7 @@ class Condoms extends Component {
         const strippedG = g.replace(/\D/g, '');
         const parsedG = parseInt(strippedG) / 10;
         const totalG = girth + 0.4;
-        if (parsedG < totalG && parsedG > girth) {
+        if (parsedG < totalG && parsedG >= girth) {
           return true;
         }
         return false;
@@ -89,6 +89,13 @@ class Condoms extends Component {
       <div className="Condoms-container">
         <div className="Condoms-menu">
           {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
+          {allItems.length !== 0 ? (
+            <h3 class="youSearched">
+              Dina mått: Omkrets: {this.props.girth}
+              cm, Längd: {this.props.length}
+              cm
+            </h3>
+          ) : null}
           {allItems.length > 1 ? (
             <div>
               <Dropdown overlay={menu} trigger={['click']}>

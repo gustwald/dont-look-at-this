@@ -113,7 +113,7 @@ class Calculate extends Component {
               <h1 className="numberindex">{`${this.state.girthValue} cm`}</h1>
               <Slider
                 min={6}
-                max={20}
+                max={14}
                 value={this.state.girthValue}
                 onChange={this.onChange}
                 tipFormatter={formatter}
