@@ -90,7 +90,7 @@ class Condoms extends Component {
         <div className="Condoms-menu">
           {allItems.length !== 0 ? <h1>Ditt resultat:</h1> : null}
           {allItems.length !== 0 ? (
-            <h3 class="youSearched">
+            <h3 className="youSearched">
               Dina mått: Omkrets: {this.props.girth}
               cm, Längd: {this.props.length}
               cm

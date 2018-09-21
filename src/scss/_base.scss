@@ -118,6 +118,12 @@ ul {
   align-items: center;
   padding: 0;
 }
+.ant-dropdown {
+  z-index: 999;
+}
+.ant-dropdown-menu {
+  z-index: 800;
+}
 
 .ant-dropdown-menu-item {
   z-index: 999;

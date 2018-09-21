@@ -21,7 +21,7 @@ const Step = Steps.Step;
 
 class Calculate extends Component {
   state = {
-    girthValue: 0,
+    girthValue: 6,
     lengthValue: 0,
     condoms: [],
     loading: false,
@@ -110,7 +110,11 @@ class Calculate extends Component {
                 Omkrets <img src={compass} alt="girth" />
               </p>
 
-              <h1 className="numberindex">{`${this.state.girthValue} cm`}</h1>
+              <h1 className="numberindex">
+                {this.state.girthValue === 14
+                  ? `${this.state.girthValue}+ cm`
+                  : `${this.state.girthValue} cm`}
+              </h1>
               <Slider
                 min={6}
                 max={14}
