@@ -472,8 +472,8 @@ body {
 @media (min-width: 0) and (max-width: 450px) {
   .youSearched {
     position: absolute;
-    top: 10px;
-    font-size: 14px; }
+    top: 40px;
+    font-size: 18px; }
   .measureindex {
     margin: 0; }
   .emoji {
@@ -514,7 +514,7 @@ body {
   .howTomeasure {
     margin-top: 3vh; }
   .Condoms-container {
-    margin-top: 40px; } }
+    margin-top: 80px; } }
 
 .modalWidth {
   width: 300px; }
