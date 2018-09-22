@@ -15,6 +15,7 @@
     "npm": "^5.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-dropdown": "^1.6.2",
     "react-scripts": "1.0.17",
     "smooth-scroll": "^12.1.5",
     "waypoints": "^4.0.1",

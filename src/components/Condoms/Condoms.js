@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Popover } from 'antd';
 import Loader from '../Loader/Loader';
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown, Icon, Select } from 'antd';
 
 import '../../scss/components/_Condoms.scss';
 import { Emoji } from 'emoji-mart';
+const Option = Select.Option;
 
 class Condoms extends Component {
   state = {
@@ -22,6 +23,15 @@ class Condoms extends Component {
       isFetching: false,
     });
   }
+  handleChange = key => {
+    if (key === 'latexfree') {
+      this.setState({ material: 'latexfree', filter: 'Latexfree' });
+    } else if (key === 'all') {
+      this.setState({ material: '', filter: '' });
+    } else if (key == 'thickness') {
+      this.setState({ material: 'thickness', filter: 'thickness' });
+    }
+  };
 
   onClick = ({ key }) => {
     if (key === 'latexfree') {
@@ -98,7 +108,7 @@ class Condoms extends Component {
           ) : null}
           {allItems.length > 1 ? (
             <div>
-              <Dropdown overlay={menu} placement="topLeft" trigger={['click']}>
+              {/* <Dropdown overlay={menu} placement="topLeft" trigger={['click']}>
                 <span className="ant-dropdown-link">
                   Filtrera på{' '}
                   <span style={{ color: '#d15bf1' }}>
@@ -106,7 +116,18 @@ class Condoms extends Component {
                   </span>
                   <Icon type="down" />
                 </span>
-              </Dropdown>
+              </Dropdown> */}
+              <Select
+                defaultValue="Filtrera på"
+                style={{ width: 120 }}
+                onChange={this.handleChange}
+              >
+                <Option value="thickness">Extra tunna</Option>
+                <Option value="latexfree">Latexfria</Option>
+                {material !== '' || feature !== '' ? (
+                  <Option value="all">Nollställ filter</Option>
+                ) : null}
+              </Select>
             </div>
           ) : null}
         </div>
