@@ -221,6 +221,14 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .ant-popup-open {
+    display: none;
+  }
+
+  .ant-popover-inner-content {
+    display: none;
+  }
+
   .youSearched {
     position: absolute;
     top: 40px;

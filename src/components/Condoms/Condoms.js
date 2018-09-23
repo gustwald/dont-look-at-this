@@ -55,6 +55,8 @@ class Condoms extends Component {
   }
 
   render() {
+    const windowWidth = window.innerWidth;
+    console.log(windowWidth);
     const { material, feature, filter } = this.state;
     const menu = (
       <Menu onClick={this.onClick}>

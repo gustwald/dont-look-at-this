@@ -226,6 +226,7 @@ ul {
   transform: scale(1.1); }
 
 .notFound {
+  padding-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,6 +471,10 @@ body {
   color: #d380ea; }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .ant-popup-open {
+    display: none; }
+  .ant-popover-inner-content {
+    display: none; }
   .youSearched {
     position: absolute;
     top: 40px;
