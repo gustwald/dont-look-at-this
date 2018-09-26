@@ -70,7 +70,6 @@ class Calculate extends Component {
     this.setState({
       girthValue: value,
     });
-    console.log(this.state.girthValue);
   };
 
   onLengthChange = value => {

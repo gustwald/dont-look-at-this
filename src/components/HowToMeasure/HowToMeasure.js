@@ -43,7 +43,6 @@ class HowToMeasure extends Component {
     this.setState({ showGirthModal: false });
   };
   nextStep = () => {
-    console.log('click');
     this.setState({ showHowTo: false });
   };
 

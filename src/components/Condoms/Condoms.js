@@ -15,6 +15,7 @@ class Condoms extends Component {
     material: '',
     feature: '',
     filter: '',
+    selected: 'Filtrera på',
   };
   componentWillReceiveProps(newProps) {
     this.setState({
@@ -23,11 +24,15 @@ class Condoms extends Component {
       isFetching: false,
     });
   }
+  change = event => {
+    this.setState({ selected: event.target.value });
+    this.handleChange(event.target.value);
+  };
   handleChange = key => {
     if (key === 'latexfree') {
       this.setState({ material: 'latexfree', filter: 'Latexfree' });
     } else if (key === 'all') {
-      this.setState({ material: '', filter: '' });
+      this.setState({ material: '', filter: '', selected: 'Filtrera på' });
     } else if (key == 'thickness') {
       this.setState({ material: 'thickness', filter: 'thickness' });
     }
@@ -37,7 +42,7 @@ class Condoms extends Component {
     if (key === 'latexfree') {
       this.setState({ material: 'latexfree', filter: 'Latexfree' });
     } else if (key === 'all') {
-      this.setState({ material: '', filter: '' });
+      this.setState({ material: '', filter: '', selected: 'Filtrera på' });
     } else if (key == 'thickness') {
       this.setState({ material: 'thickness', filter: 'thickness' });
     }
@@ -55,8 +60,7 @@ class Condoms extends Component {
   }
 
   render() {
-    const windowWidth = window.innerWidth;
-    console.log(windowWidth);
+    console.log(this.state.selected);
     const { material, feature, filter } = this.state;
     const menu = (
       <Menu onClick={this.onClick}>
@@ -96,7 +100,6 @@ class Condoms extends Component {
       .sort(
         (a, b) => parseInt(b.condom_marginal) - parseInt(a.condom_marginal),
       );
-
     return (
       <div className="Condoms-container">
         <div className="Condoms-menu">
@@ -110,7 +113,7 @@ class Condoms extends Component {
           ) : null}
           {allItems.length > 1 ? (
             <div>
-              <Dropdown
+              {/* <Dropdown
                 overlay={menu}
                 placement="bottomLeft"
                 trigger={['click']}
@@ -122,18 +125,22 @@ class Condoms extends Component {
                   </span>
                   <Icon type="down" />
                 </span>
-              </Dropdown>
-              {/* <Select
-                defaultValue="Filtrera på"
-                style={{ width: 120 }}
-                onChange={this.handleChange}
-              >
-                <Option value="thickness">Extra tunna</Option>
-                <Option value="latexfree">Latexfria</Option>
+              </Dropdown> */}
+              <select onChange={this.change} name="filterDd">
+                <option
+                  value=""
+                  disabled={this.state.selected !== 'Filtrera på'}
+                  value={this.state.selected}
+                  selected={this.state.selected === 'Filtrera på'}
+                >
+                  Filtrera på
+                </option>
+                <option value="thickness">Extra tunna</option>
+                <option value="latexfree">Latexfria</option>
                 {material !== '' || feature !== '' ? (
-                  <Option value="all">Nollställ filter</Option>
+                  <option value="all">Nollställ filter</option>
                 ) : null}
-              </Select> */}
+              </select>
             </div>
           ) : null}
         </div>
