@@ -4,7 +4,6 @@ import { Button } from 'antd';
 import { Emoji } from 'emoji-mart';
 import measure from './icons/measure.svg';
 import insta from './icons/instagram.png';
-import Header from './components/Header/Header';
 import text from './utils/text.js';
 import Logo from './components/Logo/Logo';
 import HowToMeasure from './components/HowToMeasure/HowToMeasure';
@@ -16,11 +15,6 @@ class App extends Component {
     showSteps: false,
     logoLoaded: false,
   };
-
-  componentDidMount() {
-    const loader = document.querySelector('.spinner');
-    loader.style.display = 'none';
-  }
 
   showSteps = () => {
     this.setState({ showSteps: true, showIntro: false });

@@ -1,0 +1,73 @@
+.Condoms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Condoms-child-mobile {
+  display: none;
+}
+.Condoms-container {
+  margin-top: 20vh;
+}
+
+.Condoms-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.Condoms-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.3s ease-in-out;
+}
+.Condoms-img:hover {
+  transform: scale(1.1);
+}
+
+.notFound {
+  padding-top: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    color: black;
+  }
+}
+
+.Condoms-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 0) and (max-width: 450px) {
+  .Condoms {
+    a {
+      width: 100%;
+    }
+  }
+  .Condoms-child-mobile {
+    display: block;
+    color: black;
+  }
+  .Condoms-child {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .Condoms-img {
+    width: 200px;
+    height: 200px;
+  }
+  .Condoms-img:hover {
+    transform: scale(1);
+  }
+}

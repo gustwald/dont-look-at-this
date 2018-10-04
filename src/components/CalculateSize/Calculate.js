@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Slider, InputNumber, Button, Steps } from 'antd';
-import Header from '../Header/Header';
 import { Emoji } from 'emoji-mart';
 import { callApi } from '../../utils/data';
 import Condoms from '../Condoms/Condoms';

@@ -1,7 +1,6 @@
 @import url(~antd/dist/antd.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto.");
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
-@import url("https://fonts.googleapis.com/css?family=Lato");
 * {
   padding: 0;
   margin: 0; }
@@ -106,6 +105,12 @@ ul {
   justify-content: center;
   align-items: center;
   padding: 0; }
+
+.ant-dropdown {
+  z-index: 999; }
+
+.ant-dropdown-menu {
+  z-index: 800; }
 
 .ant-dropdown-menu-item {
   z-index: 999; }
@@ -220,6 +225,7 @@ ul {
   transform: scale(1.1); }
 
 .notFound {
+  padding-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,10 +470,14 @@ body {
   color: #d380ea; }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .ant-popup-open {
+    display: none; }
+  .ant-popover-inner-content {
+    display: none; }
   .youSearched {
     position: absolute;
-    top: 10px;
-    font-size: 14px; }
+    top: 40px;
+    font-size: 16px; }
   .measureindex {
     margin: 0; }
   .emoji {
@@ -489,7 +499,8 @@ body {
     left: calc(50% - 20px); }
   .notFound {
     text-align: center;
-    width: 70%; }
+    width: 70%;
+    padding-top: 60px; }
     .notFound h2 {
       margin-bottom: 20px; }
     .notFound p {
@@ -507,7 +518,7 @@ body {
   .howTomeasure {
     margin-top: 3vh; }
   .Condoms-container {
-    margin-top: 40px; } }
+    margin-top: 80px; } }
 
 .modalWidth {
   width: 300px; }

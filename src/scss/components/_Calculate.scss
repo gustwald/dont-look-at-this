@@ -4,8 +4,6 @@
 
 .Calculate {
   width: 100%;
-  // background: #deb6ea;
-  // height: 100vh;
   padding: 80px 200px;
   @include bm(0, $b-mobile) {
     padding: 30px;
@@ -18,8 +16,6 @@
   width: 50%;
 }
 .Calculate-condomSize-item {
-  // width: 300px;
-
   text-align: left;
   p {
     font-size: 26px;
