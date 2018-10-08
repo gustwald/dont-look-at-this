@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calculate from '../CalculateSize/Calculate';
 import { Modal, Icon } from 'antd';
-import howto from '../../icons/howtomeasure.gif';
+import howto from '../../icons/mesur.mp4';
 
 import howToGirth from '../../icons/measure-tool2-girth2.gif';
 import howToLength from '../../icons/measure-tool2-length2.gif';
@@ -52,7 +52,17 @@ class HowToMeasure extends Component {
         {this.state.showHowTo ? (
           <div className="howTomeasure">
             <h1>Hur du mäter</h1>
-            <img className="measure-gif" src={howto} alt="man" />
+            <video
+              className="measure-gif"
+              loop
+              autoPlay
+              playsInline
+              width="300"
+              height="220"
+            >
+              <source src={howto} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="measurements">
               <div className="child length">
                 <h3 className="measurements--text">

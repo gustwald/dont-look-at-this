@@ -4,7 +4,6 @@ import Loader from '../Loader/Loader';
 import { Menu, Dropdown, Icon, Select } from 'antd';
 
 import '../../scss/components/_Condoms.scss';
-import { Emoji } from 'emoji-mart';
 const Option = Select.Option;
 
 class Condoms extends Component {
@@ -60,7 +59,6 @@ class Condoms extends Component {
   }
 
   render() {
-    console.log(this.state.selected);
     const { material, feature, filter } = this.state;
     const menu = (
       <Menu onClick={this.onClick}>
@@ -185,12 +183,8 @@ class Condoms extends Component {
             })
           ) : (
             <div className="notFound">
-              <h2>
-                Vi hittade inga kondomer som passade din kuk{' '}
-                <Emoji
-                  emoji={{ id: 'white_frowning_face', skin: 3 }}
-                  size={24}
-                />{' '}
+              <h2 className="emojinotfound">
+                Vi hittade inga kondomer som passade din kuk <span>😢</span>{' '}
               </h2>
               <p>
                 Du är välkommen att <a href="/">försöka igen</a>.

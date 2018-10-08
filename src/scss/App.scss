@@ -3,7 +3,8 @@
   margin: 0;
 }
 @import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto.');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Roboto.');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 $open-sans: 'Open Sans', sans-serif;
 $roboto: 'Roboto', sans-serif;
@@ -29,26 +30,43 @@ html {
 .calculate {
   margin: 0 auto;
 }
-
-.introText {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 56px;
-  text-align: center;
-  line-height: 1.2;
+.ml15 {
+  font-weight: 800;
+  font-size: 3em;
   text-transform: uppercase;
-  padding-top: 70px;
-}
-.introTextSecond {
-  @extend .introText;
-  padding-top: 0.5em;
-}
-.subText {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 26px;
+  // letter-spacing: 0.3rem;
+  font-family: 'Fjalla one', sans-serif;
   text-align: center;
+  margin-bottom: 0;
 }
+.realemoji {
+  font-size: 64px;
+}
+.ml15 .word {
+  color: #bd07f0;
+  display: inline-block;
+  line-height: 1em;
+  margin-right: 10px;
+}
+// .introText {
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 900;
+//   font-size: 56px;
+//   text-align: center;
+//   line-height: 1.2;
+//   text-transform: uppercase;
+//   padding-top: 70px;
+// }
+// .introTextSecond {
+//   @extend .introText;
+//   padding-top: 0.5em;
+// }
+// .subText {
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 900;
+//   font-size: 26px;
+//   text-align: center;
+// }
 
 .intro {
   display: flex;
@@ -56,24 +74,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
-.calculate-cta {
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  background: purple;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-family: 'Open-sans', sans-serif;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-top: 30px;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 $background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
 $purple: #bd07f0;
@@ -87,9 +87,6 @@ html {
 
 body {
   font-family: 'Fjalla One', sans-serif;
-  //   background: #ec008c;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
@@ -106,13 +103,13 @@ body {
 .measure {
   width: 300px;
   animation: float 3s ease-in-out infinite;
-  // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  margin-top: 30px;
-  cursor: pointer;
+  text-transform: uppercase;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   span {
     padding: 0 5px;
   }
@@ -124,15 +121,12 @@ body {
 }
 @keyframes float {
   0% {
-    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     transform: translatey(0px);
   }
   50% {
-    // box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
     transform: translatey(-10px);
   }
   100% {
-    // box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     transform: translatey(0px);
   }
 }
@@ -204,6 +198,16 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 450px) {
+  .howTomeasure {
+    .measure-gif {
+      width: 260px;
+      height: 180px;
+    }
+  }
+
+  .ml15 {
+    font-size: 3em;
+  }
   .ant-popup-open {
     display: none;
   }
@@ -220,7 +224,11 @@ body {
   .measureindex {
     margin: 0;
   }
+  .emojinotfound {
+    font-size: 24px;
+  }
   .emoji {
+    font-size: 64px;
     margin-bottom: 10px;
   }
   .numberindex {
@@ -228,11 +236,6 @@ body {
   }
   .howTomeasure > h1 {
     margin-bottom: 0;
-  }
-  img.measure-gif {
-    height: 180px !important;
-    margin-bottom: 10px !important;
-    width: 260px !important;
   }
   .measurements--text {
     margin-bottom: 10px;
@@ -247,9 +250,9 @@ body {
     text-align: center;
     width: 70%;
     padding-top: 60px;
-    h2 {
-      margin-bottom: 20px;
-    }
+    // h2 {
+    //   margin-bottom: 20px;
+    // }
     p {
       font-size: 18px;
     }

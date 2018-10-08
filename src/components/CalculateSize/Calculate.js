@@ -1,11 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Slider, InputNumber, Button, Steps } from 'antd';
-import { Emoji } from 'emoji-mart';
-import { callApi } from '../../utils/data';
 import Condoms from '../Condoms/Condoms';
 import kondomer from '../../condoms.json';
 import Loader from '../Loader/Loader';
-import text from '../../utils/text';
 import ruler from '../../icons/ruler-1.svg';
 import compass from '../../icons/compass.svg';
 import width from '../../icons/measure-tool2-girth2.gif';
@@ -48,20 +45,20 @@ class Calculate extends Component {
   };
   getEmoji = count => {
     if (count === 0) {
-      return 'neutral_face';
+      return '\u{1F610}';
     }
     if (count <= 5) {
-      return 'expressionless';
+      return '\u{1F644}';
     } else if (count <= 10) {
-      return 'sweat_smile';
+      return '\u{1F605}';
     } else if (count <= 15) {
-      return 'face_with_rolling_eyes';
+      return '\u{1F611}';
     } else if (count <= 20) {
-      return 'smirk';
+      return '\u{1F60F}';
     } else if (count <= 25) {
-      return 'open_mouth';
+      return '\u{1F635}';
     } else if (count <= 30) {
-      return 'heart_eyes';
+      return '\u{1F60D}';
     }
   };
 
@@ -122,7 +119,8 @@ class Calculate extends Component {
                 step={0.2}
               />
               <div className="emoji">
-                <Emoji emoji={{ id: emoji, skin: 3 }} size={64} />
+                <span>{emoji}</span>
+                {/* <Emoji emoji={{ id: emoji, skin: 3 }} size={64} /> */}
               </div>
               <button className="Button calculate" onClick={this.calculate}>
                 Räkna ut
