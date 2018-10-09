@@ -74,7 +74,7 @@ class App extends Component {
           </section>
         ) : null}
         {showSteps ? <HowToMeasure /> : null}
-        {/* <div className="socials">
+        <div className="socials">
           <div
             className="fb-share-button"
             data-href="https://condomsizecalculator.com/"
@@ -90,7 +90,7 @@ class App extends Component {
               Dela
             </a>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }

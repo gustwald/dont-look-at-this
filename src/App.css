@@ -470,6 +470,8 @@ body {
     font-size: 16px; }
   .measureindex {
     margin: 0; }
+  .emojinotfound {
+    font-size: 24px; }
   .emoji {
     font-size: 64px;
     margin-bottom: 10px; }

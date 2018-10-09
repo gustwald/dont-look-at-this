@@ -24,13 +24,19 @@
     <div id="root"></div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125415214-1"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments)} gtag("js", new Date), gtag("config", "UA-125415214-1")</script>
-    <!-- <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = 'https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v3.1&appId=163619417548662&autoLogAppEvents=1';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script> -->
+    <div id="fb-root"></div>
+    <script>
+        window.onload = function () {
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v3.1&appId=163619417548662&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        }
+
+
+    </script>
 
 </html>
