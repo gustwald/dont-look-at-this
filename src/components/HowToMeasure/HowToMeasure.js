@@ -16,6 +16,10 @@ class HowToMeasure extends Component {
     showGirthModal: false,
   };
 
+  componentDidMount() {
+    const video = document.getElementById('video');
+    video.muted = 'muted';
+  }
   showWidthModal = () => {
     this.setState({
       showWidthModal: true,
@@ -53,6 +57,7 @@ class HowToMeasure extends Component {
           <div className="howTomeasure">
             <h1>Hur du mäter</h1>
             <video
+              id="video"
               className="measure-gif"
               loop
               autoPlay
@@ -60,7 +65,6 @@ class HowToMeasure extends Component {
               width="300"
               height="220"
               preload="auto"
-              muted
             >
               <source src={howto} type="video/mp4" />
               Your browser does not support the video tag.
