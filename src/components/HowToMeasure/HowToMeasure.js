@@ -59,6 +59,7 @@ class HowToMeasure extends Component {
               playsInline
               width="300"
               height="220"
+              preload="auto"
             >
               <source src={howto} type="video/mp4" />
               Your browser does not support the video tag.
