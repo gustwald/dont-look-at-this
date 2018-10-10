@@ -196,7 +196,13 @@ body {
     color: #d380ea;
   }
 }
-
+.emoji {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+.emojinotfound {
+  font-size: 24px;
+}
 @media (min-width: 0) and (max-width: 450px) {
   .howTomeasure {
     .measure-gif {
@@ -224,13 +230,7 @@ body {
   .measureindex {
     margin: 0;
   }
-  .emojinotfound {
-    font-size: 24px;
-  }
-  .emoji {
-    font-size: 64px;
-    margin-bottom: 10px;
-  }
+
   .numberindex {
     margin-bottom: 10px;
   }

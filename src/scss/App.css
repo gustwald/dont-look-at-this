@@ -453,6 +453,13 @@ body {
 .title:nth-child(3) {
   color: #d380ea; }
 
+.emoji {
+  font-size: 64px;
+  margin-bottom: 10px; }
+
+.emojinotfound {
+  font-size: 24px; }
+
 @media (min-width: 0) and (max-width: 450px) {
   .howTomeasure .measure-gif {
     width: 260px;
@@ -469,11 +476,6 @@ body {
     font-size: 16px; }
   .measureindex {
     margin: 0; }
-  .emojinotfound {
-    font-size: 24px; }
-  .emoji {
-    font-size: 64px;
-    margin-bottom: 10px; }
   .numberindex {
     margin-bottom: 10px; }
   .howTomeasure > h1 {
