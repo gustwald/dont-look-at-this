@@ -65,6 +65,7 @@ class HowToMeasure extends Component {
               width="300"
               height="220"
               preload="auto"
+              controls
             >
               <source src={howto} type="video/mp4" />
               Your browser does not support the video tag.
