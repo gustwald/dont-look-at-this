@@ -167,6 +167,9 @@ class Condoms extends Component {
                       <img src={condom.image} className="Condoms-img" />
 
                       <div className="Condoms-child-mobile">
+                        <p style={{ fontSize: '16px' }}>
+                          {condom.name.replace(' - Kondomer', '')}
+                        </p>
                         <p>Material: {condom.condom_materials}</p>
                         <p>
                           Omkrets: {parseInt(condom.condom_girth) / 10 + 'cm'}
