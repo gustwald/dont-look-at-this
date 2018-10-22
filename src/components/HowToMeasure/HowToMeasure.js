@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calculate from '../CalculateSize/Calculate';
 import { Modal, Icon } from 'antd';
-import howto from '../../icons/mesur.mp4';
+import howto from '../../icons/opti.mp4';
 
 import howToGirth from '../../icons/measure-tool2-girth2.gif';
 import howToLength from '../../icons/measure-tool2-length2.gif';
