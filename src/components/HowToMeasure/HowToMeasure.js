@@ -3,6 +3,7 @@ import Calculate from '../CalculateSize/Calculate';
 import { Modal, Icon } from 'antd';
 import howto from '../../icons/opti.mp4';
 import howtogg from '../../icons/opti.ogv';
+import howtomov from '../../icons/opti.mov';
 import howToGirth from '../../icons/measure-tool2-girth2.gif';
 import howToLength from '../../icons/measure-tool2-length2.gif';
 
@@ -68,6 +69,7 @@ class HowToMeasure extends Component {
             >
               <source src={howto} type="video/mp4" />
               <source src={howtogg} type="video/ogv" />
+              <source src={howtomov} type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <div className="measurements">
